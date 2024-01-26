@@ -3,34 +3,24 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, Frontend Engineer, blogger, reader, and geek who is passionate about the latest technologies and updates. he loves exploring and travels ✈, he loves to eat `Knafeh Nabulsi` 😋,and watch soccer matches ⚽.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
-
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
-
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+<table align="center" border="0">
+  <tr>
+    <td>
+      <a href="https://github.com/IMM9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/github.svg" alt="Github Profile" height="30" width="40" /></a>
+    </td>
+    <td>
+      <a href="https://linkedin.com/in/islam-muhammad" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/linkedin.svg" alt="Linkedin Profile" height="30" width="40" /></a>
+    </td>
+    <td>
+    <a href="https://dev.to/IMM9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/dev-dot-to.svg" alt="Dev Profile" height="30" width="40" /></a>
+    </td>
+    <td>
+    <a href="https://IMM9O.medium.com" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/medium.svg" alt="Medium Profile" height="30" width="40" /></a>
+    </td>
+    <td>
+    <a href="https://imm9o.github.io/feed/feed.xml" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/rss.svg" alt="My Website Feed" height="20" width="40" /></a>
+    </td>
+  </tr>
+</table>
