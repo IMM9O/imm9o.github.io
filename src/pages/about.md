@@ -21,7 +21,7 @@ he loves exploring and travels ✈, he loves to eat `Knafeh Nabulsi` 😋,and wa
     <a href="https://IMM9O.medium.com" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/medium.svg" alt="Medium Profile" height="30" width="40" /></a>
     </td>
     <td>
-    <a href="https://imm9o.github.io/feed/feed.xml" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/rss.svg" alt="My Website Feed" height="20" width="40" /></a>
+    <a href="https://imm9o.github.io/rss.xml" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/rss.svg" alt="My Website Feed" height="20" width="40" /></a>
     </td>
   </tr>
 </table>
