@@ -36,4 +36,16 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
+  {
+    name: "Medium",
+    href: "https://islamuad.medium.com/",
+    linkTitle: `${SITE.title} on Medium`,
+    active: true,
+  },
+  {
+    name: "Dev.to",
+    href: "https://dev.to/islamuad",
+    linkTitle: `${SITE.title} on Medium`,
+    active: true,
+  },
 ];
