@@ -81,7 +81,7 @@ React team recommended to warp the web component with react component just to ma
 
 ## Directives
 
-![directives everywhere](../images/directives_memes.png)
+![directives everywhere](https://dev-to-uploads.s3.amazonaws.com/i/bq6khdouhsm2j18e62vn.png)
 
 One of the funny facts about directives that it exists in almost any framework except react. Mostly the frameworks using two-approach either using their own template engine like [blade](https://laravel.com/docs/7.x/blade) in laravel or using regular html as template engine like RiotJs, VueJs and Angular.
 
