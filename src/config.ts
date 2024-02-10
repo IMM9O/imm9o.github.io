@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://imm9o.github.io/", // replace this with your deployed domain
   author: "Islam Muhammad",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "IMM9O",
+  title: "Islam Muhammad Blog",
   ogImage: "IMM9O-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 10,
@@ -25,26 +25,26 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/IMM9O",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
-  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/islam-muhammad/",
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
   {
+    name: "Github",
+    href: "https://github.com/IMM9O",
+    linkTitle: ` ${SITE.title} on Github`,
+    active: true,
+  },
+  {
     name: "Medium",
-    href: "https://islamuad.medium.com/",
+    href: "https://imm9o.medium.com/",
     linkTitle: `${SITE.title} on Medium`,
     active: true,
   },
   {
     name: "Dev.to",
-    href: "https://dev.to/islamuad",
+    href: "https://dev.to/imm9o",
     linkTitle: `${SITE.title} on Medium`,
     active: true,
   },
