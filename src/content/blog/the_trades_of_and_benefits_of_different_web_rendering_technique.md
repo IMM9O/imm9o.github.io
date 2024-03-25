@@ -2,7 +2,7 @@
 author: Islam Muhammad
 title: "The trades of and benefits of different web rendering technique"
 description: "Explore the core advantages and trade-offs of web rendering techniques, crucial for optimizing web performance and enhancing user experiences."
-ogImage: https://i.pinimg.com/564x/4d/5e/01/4d5e01b6b2926276e5d65e8695572834.jpg
+ogImage: https://images.unsplash.com/photo-1533851581128-70d0eef12cd4?q=80&w=2712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 featured: false
 tags:
   - SSR
@@ -11,7 +11,7 @@ tags:
 pubDatetime: 2024-05-03
 ---
 
-![Art Canvas](https://i.pinimg.com/564x/4d/5e/01/4d5e01b6b2926276e5d65e8695572834.jpg)
+![Art Canvas](https://images.unsplash.com/photo-1533851581128-70d0eef12cd4?q=80&w=2712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 In the ever-evolving landscape of web development, rendering techniques play a pivotal role in defining the performance, user experience, and scalability of web applications. From the traditional server-side rendering (SSR) that powers the initial content delivery, to the dynamic client-side rendering (CSR) that brings interactive experiences to life, each method carries its own set of trade-offs and benefits. Furthermore, the advent of static site generators (SSG) and the innovative hybrid approaches like incremental static regeneration (ISR) offer developers a spectrum of choices to tailor the rendering process to their specific needs. This discussion delves into the nuances of these techniques, shedding light on how they influence key performance metrics such as First Contentful Paint (**[FCP](https://web.dev/articles/fcp)**), Largest Contentful Paint (**[LCP](https://web.dev/articles/lcp)**), First Input Delay (**[FID](https://web.dev/articles/fid)**), and ultimately, how they can be leveraged to enhance the end-user’s journey through the web.
 
