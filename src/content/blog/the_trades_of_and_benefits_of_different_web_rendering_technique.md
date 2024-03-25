@@ -3,7 +3,7 @@ author: Islam Muhammad
 title: "The trades of and benefits of different web rendering technique"
 description: "Explore the core advantages and trade-offs of web rendering techniques, crucial for optimizing web performance and enhancing user experiences."
 ogImage: https://i.pinimg.com/564x/4d/5e/01/4d5e01b6b2926276e5d65e8695572834.jpg
-featured: false
+featured: true
 tags:
   - SSR
   - CSR
