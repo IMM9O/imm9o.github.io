@@ -36,16 +36,4 @@ export const SOCIALS: SocialObjects = [
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
-  {
-    name: "Medium",
-    href: "https://imm9o.medium.com/",
-    linkTitle: `${SITE.title} on Medium`,
-    active: true,
-  },
-  {
-    name: "Dev.to",
-    href: "https://dev.to/imm9o",
-    linkTitle: `${SITE.title} on Medium`,
-    active: true,
-  },
 ];
