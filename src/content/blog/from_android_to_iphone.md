@@ -1,7 +1,7 @@
 ---
 author: Islam Muhammad
 title: "From Android to iPhone: what I love and what I still miss"
-description: My notes after moving from Android to an iPhone 13. The surprises, the friction, and why I'm staying.
+description: My notes after I moved from Android to an iPhone 13. The surprises, the problems, and why I am staying.
 pubDatetime: 2026-11-07T10:00:00Z
 tags:
   - iphone
@@ -12,18 +12,18 @@ featured: false
 draft: true
 ---
 
-Before we start, this is not a spec review. You won't find benchmarks or camera samples here. These are my notes after moving from Android to an iPhone 13 and using it every day: what surprised me, what annoyed me, and what I got used to.
+Before we start: this is not a spec review. You will not find benchmarks or camera samples here. I moved from Android to an iPhone 13, and I use it every day. These are my notes on what surprised me, what annoyed me, and what I got used to.
 
 ## Table of contents
 
 ## Why did I switch?
 
-Two reasons pushed me:
+Two reasons made me switch:
 
-- **Long updates.** An iPhone keeps getting iOS updates for years.
-- **Camera and build quality.**
+- Long updates: an iPhone gets iOS updates for many years.
+- Camera and build quality.
 
-A third reason showed up after the switch: the Apple ecosystem. I didn't know how strong it is until I used it myself. More on that at the end.
+I found a third reason after the switch: the Apple ecosystem (Apple devices that work together). I did not know how strong it is until I used it myself. I talk about it at the end.
 
 <svg viewBox="0 0 420 400" width="100%" role="img" aria-labelledby="journey-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
 <title id="journey-title">My move from Android to iPhone, step by step</title>
@@ -47,43 +47,43 @@ A third reason showed up after the switch: the Apple ecosystem. I didn't know ho
 
 ## What do I love about iOS?
 
-Small things I use every day:
+I use these small things every day:
 
-- **QR scanner inside the camera.** No extra app.
-- **Document scanner** built in.
-- **Live notifications** for delivery, taxi drivers and maps. I follow the order or the ride without opening the app.
-- **StandBy** while charging. The phone shows a clock, my calendar and more.
-- **Apple Notes.**
-- **Default apps.** I set WhatsApp as my default messaging app, so I can send my location to a delivery guy without saving his number. I also set Google Authenticator as the default app for codes.
+- QR scanner in the camera: no extra app.
+- Document scanner: built in.
+- Live notifications for deliveries, taxis, and maps: I follow the order or the ride without opening the app.
+- StandBy: when the phone charges, it shows a clock, my calendar, and more.
+- Apple Notes.
+- Default apps: I set WhatsApp as my default messaging app. Now I can send my location to a delivery driver without saving their number. I also set Google Authenticator as the default app for codes.
 
 ## What annoyed me when I moved?
 
-Some of this list came from Android habits. Some of it is real.
+Some items on this list came from my Android habits. Others are real problems.
 
-| Area                 | What happened                                               | Now                                                      |
-| -------------------- | ----------------------------------------------------------- | -------------------------------------------------------- |
-| Typing               | Auto-correction is not great                                | ✅ You can turn it off                                   |
-| Translation          | Apple Translate is decent, Google Translate is still better | ✅ Fine                                                  |
-| Background backup    | Had issues                                                  | ✅ Fixed after iOS 18                                    |
-| Unlocking            | Two steps: unlock, then swipe up to reach the home screen   | ✅ Got used to it                                        |
-| Notification control | You turn off notifications app by app                       | ✅ OK, but annoying if you install and remove apps a lot |
-| Mail notifications   | No push notifications for Mail                              | ✅ A feature for me: I check mail once or twice a day    |
-| Back navigation      | No single back gesture across the system                    | ❌ Some popups close only if you force close the app     |
-| Truecaller           | Doesn't work properly                                       | ❌                                                       |
-| Storage              | No option to clear an app's data or even its cache          | ❌                                                       |
+| Area                 | What happened                                              | Now                                                           |
+| -------------------- | ---------------------------------------------------------- | ------------------------------------------------------------- |
+| Typing               | Auto-correction is not good                                | ✅ You can turn it off                                        |
+| Translation          | Apple Translate is good. Google Translate is better.       | ✅ Fine                                                       |
+| Background backup    | It had problems                                            | ✅ Fixed after iOS 18                                         |
+| Unlocking            | Two steps: unlock, then swipe up to get to the home screen | ✅ I got used to it                                           |
+| Notification control | You turn off notifications one app at a time               | ✅ OK, but annoying when you install and remove a lot of apps |
+| Mail notifications   | No push notifications for Mail                             | ✅ For me, this is a feature: I read mail once or twice a day |
+| Back navigation      | No single back gesture in the whole system                 | ❌ Some popups close only when you force close the app        |
+| Truecaller           | Does not work correctly                                    | ❌                                                            |
+| Storage              | You cannot clear the data or the cache of an app           | ❌                                                            |
 
-Six of the nine moved to ✅. On the other hand, the three ❌ still bother me.
+Six of the nine items are now ✅. But the three ❌ items still annoy me.
 
 ## Which Google apps do I still need?
 
-Apple has its own app for each of these, but I still use Google's:
+Apple has its own app for each of these. I still use the Google app:
 
-- **Gmail** over Apple Mail
-- **Google Maps**, especially for local navigation
-- **YouTube**
-- **Google Translate**
+- Gmail, not Apple Mail
+- Google Maps, for local navigation
+- YouTube
+- Google Translate
 
-Good news if you're thinking about switching: all four work fine on iPhone.
+If you think about a switch, this is good news: all four apps work well on iPhone.
 
 ## What do I use my iPhone for?
 
@@ -98,7 +98,7 @@ Good news if you're thinking about switching: all four work fine on iPhone.
 
 ## Do you need the whole Apple ecosystem?
 
-I only saw how strong the Apple ecosystem is after I used it myself. Still, you don't have to buy every device. Some devices serve niche needs, and you may not have those needs.
+I saw how strong the Apple ecosystem is only after I used it myself. But you do not have to buy every device. Some devices are for special needs, and not everyone has those needs.
 
 For me, a laptop and an iPhone are all I need.
 
@@ -121,17 +121,17 @@ For me, a laptop and an iPhone are all I need.
 <text x="210" y="275" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;opacity:.8">Nice to have. Depends on your needs.</text>
 </svg>
 
-Take the Apple Watch. Is it worth it for me? Short answer: no.
+Take the Apple Watch as an example. Is it worth it for me? Short answer: no.
 
-- **Health and gym tracking.** It's the best feature for most people, but I don't care about tracking these numbers. And I wonder if a cheaper tracker that works with the Apple Health app would do the same job.
-- **Answering calls.** The watch uses its loudspeaker, and I don't want that on public transportation. With AirPods, I have to take them out and connect them to the watch, and the watch itself stays connected to the phone over Bluetooth, which drains the battery.
+- Health and gym tracking: for most people, this is the best feature. But I do not want to track these numbers. Also, I ask myself if a cheaper tracker that works with the Apple Health app can do the same job.
+- Calls: the watch uses its loudspeaker, and I do not want that on public transportation. With AirPods, I must take them out and connect them to the watch. The watch also stays connected to the phone over Bluetooth, and that uses more battery.
 
-If you're outside a lot or you train every day, your answer may be yes. That's the point: buy for your own needs.
+If you go out a lot or you train every day, your answer can be yes. Buy for your own needs.
 
 ## So, am I staying?
 
-Yes. Most of my complaints were Android habits, and I got used to them. The three that are left (back navigation, Truecaller and storage) are not enough to make me go back.
+Yes. Most of my complaints were Android habits, and I got used to them. Three problems are left: back navigation, Truecaller, and storage. They are not enough to make me go back.
 
-> Before you switch, list the apps you can't live without. For me it was Google's apps, and they all work on iPhone.
+> Before you switch, make a list of the apps that you cannot live without. For me, it was the Google apps, and they all work on iPhone.
 
-What made you switch, or what keeps you on Android?
+What made you switch? Or what keeps you on Android?
