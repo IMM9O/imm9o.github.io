@@ -2,7 +2,7 @@
 author: Islam Muhammad
 title: "From Android to iPhone: what I love and what I still miss"
 description: My notes after I moved from Android to an iPhone 13. The surprises, the problems, the Apple devices I need and the ones I skip, and why I am staying.
-pubDatetime: 2026-11-07T10:00:00Z
+pubDatetime: 2026-11-07T08:20:00Z
 tags:
   - iphone
   - ios

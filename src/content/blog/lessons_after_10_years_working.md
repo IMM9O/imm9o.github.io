@@ -2,7 +2,7 @@
 author: Islam Muhammad
 title: "12 lessons from 10 years of working as a developer"
 description: "What I learned about talking, leading, code and time after 10 years at work. Most of the lessons are not about code."
-pubDatetime: 2026-11-07T09:00:00Z
+pubDatetime: 2026-11-07T08:10:00Z
 tags:
   - career
   - tips
