@@ -8,7 +8,7 @@ One command builds the image, starts the container, and waits until the blog ans
 ./setup.sh
 ```
 
-Use another port with `PORT=3000 ./setup.sh`. Run it again to rebuild and replace the container.
+If port 8080 is busy, the script picks the next free port (8081 to 8099). Choose a port with `PORT=3000 ./setup.sh`. Run it again to rebuild and replace the blog container. It never touches your other containers.
 
 Or use Docker Compose to build and run the production site (nginx) on <http://localhost:8080>:
 
