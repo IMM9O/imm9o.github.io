@@ -2,7 +2,15 @@
 
 ## Run with Docker
 
-Build and run the production site (nginx) on <http://localhost:8080>:
+One command builds the image, starts the container, and waits until the blog answers on <http://localhost:8080>:
+
+```bash
+./setup.sh
+```
+
+Use another port with `PORT=3000 ./setup.sh`. Run it again to rebuild and replace the container.
+
+Or use Docker Compose to build and run the production site (nginx) on <http://localhost:8080>:
 
 ```bash
 docker compose up --build web
