@@ -10,9 +10,14 @@ tags:
   - review
 featured: false
 draft: true
+ogImage: https://images.unsplash.com/photo-1776093667182-90fdd25fa138?auto=format&fit=crop&w=1200&h=630&q=80
 ---
 
 Before we start: this is not a spec review. You will not find benchmarks or camera samples here. I moved from Android to an iPhone 13, and I use it every day. These are my notes on what surprised me, what annoyed me, and what I got used to.
+
+![A green iPhone 13 on a dark surface](https://images.unsplash.com/photo-1776093667182-90fdd25fa138?auto=format&fit=crop&w=1400&q=80)
+
+<p style="text-align:center;font-size:0.9em;opacity:0.8">Photo by <a href="https://unsplash.com/@dabasir">Daba Sir</a> on <a href="https://unsplash.com/photos/green-smartphone-with-dual-cameras-on-a-dark-background-nPfe0zngfic">Unsplash</a></p>
 
 ## Table of contents
 
@@ -60,6 +65,8 @@ I use these small things every day:
 
 Some items on this list came from my Android habits. Others are real problems.
 
+![Futurama Fry meme: Not sure if no Mail notifications is a bug, or a feature](@assets/images/from_android_to_iphone/meme-mail-bug-or-feature.png)
+
 | Area                 | What happened                                              | Now                                                           |
 | -------------------- | ---------------------------------------------------------- | ------------------------------------------------------------- |
 | Typing               | Auto-correction is not good                                | ✅ You can turn it off                                        |
@@ -74,6 +81,8 @@ Some items on this list came from my Android habits. Others are real problems.
 
 Six of the nine items are now ✅. But the three ❌ items still annoy me.
 
+![Boromir meme: One does not simply close a popup on iOS](@assets/images/from_android_to_iphone/meme-close-popup.png)
+
 ## Which Google apps do I still need?
 
 Apple has its own app for each of these. I still use the Google app:
@@ -84,6 +93,8 @@ Apple has its own app for each of these. I still use the Google app:
 - Google Translate
 
 If you think about a switch, this is good news: all four apps work well on iPhone.
+
+![Toy Story meme: Google apps, Google apps everywhere](@assets/images/from_android_to_iphone/meme-google-apps-everywhere.png)
 
 ## What do I use my iPhone for?
 
@@ -102,26 +113,13 @@ I saw how strong the Apple ecosystem is only after I used it myself. But you do 
 
 For me, a laptop and an iPhone are all I need.
 
-<svg viewBox="0 0 420 290" width="100%" role="img" aria-labelledby="eco-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
-<title id="eco-title">My core is a laptop and an iPhone. iPad, Apple Watch and Apple TV are optional.</title>
-<text x="210" y="40" text-anchor="middle" style="fill:rgb(var(--color-accent));font-size:15px;font-weight:700">MY CORE</text>
-<rect x="60" y="55" width="300" height="80" rx="12" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:2"/>
-<text x="135" y="101" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:18px;font-weight:700">Laptop</text>
-<text x="210" y="101" text-anchor="middle" style="fill:rgb(var(--color-accent));font-size:22px;font-weight:700">+</text>
-<text x="285" y="101" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:18px;font-weight:700">iPhone</text>
-<line x1="80" y1="135" x2="80" y2="195" style="stroke:rgb(var(--color-text-base));stroke-width:1.5;stroke-dasharray:5 5;opacity:.5"/>
-<line x1="210" y1="135" x2="210" y2="195" style="stroke:rgb(var(--color-text-base));stroke-width:1.5;stroke-dasharray:5 5;opacity:.5"/>
-<line x1="340" y1="135" x2="340" y2="195" style="stroke:rgb(var(--color-text-base));stroke-width:1.5;stroke-dasharray:5 5;opacity:.5"/>
-<rect x="20" y="195" width="120" height="46" rx="10" style="fill:none;stroke:rgb(var(--color-text-base));stroke-width:1.5;stroke-dasharray:5 5;opacity:.7"/>
-<text x="80" y="223" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:15px">iPad</text>
-<rect x="150" y="195" width="120" height="46" rx="10" style="fill:none;stroke:rgb(var(--color-text-base));stroke-width:1.5;stroke-dasharray:5 5;opacity:.7"/>
-<text x="210" y="223" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:15px">Apple Watch</text>
-<rect x="280" y="195" width="120" height="46" rx="10" style="fill:none;stroke:rgb(var(--color-text-base));stroke-width:1.5;stroke-dasharray:5 5;opacity:.7"/>
-<text x="340" y="223" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:15px">Apple TV</text>
-<text x="210" y="275" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;opacity:.8">Nice to have. Depends on your needs.</text>
-</svg>
+![My core setup is a laptop and an iPhone. An iPad and an Apple TV are nice to have.](@assets/images/from_android_to_iphone/my-setup.png)
 
 Take the Apple Watch as an example. Is it worth it for me? Short answer: no.
+
+![An iPhone, an Apple Watch and AirPods on a wooden table](https://images.unsplash.com/photo-1609692814858-f7cd2f0afa4f?auto=format&fit=crop&w=1400&q=80)
+
+<p style="text-align:center;font-size:0.9em;opacity:0.8">Photo by <a href="https://unsplash.com/@dnnsbrndl">Dennis Brendel</a> on <a href="https://unsplash.com/photos/smartphone-smartwatch-and-wireless-earbuds-YLNMXzXk8zs">Unsplash</a></p>
 
 - Health and gym tracking: for most people, this is the best feature. But I do not want to track these numbers. Also, I ask myself if a cheaper tracker that works with the Apple Health app can do the same job.
 - Calls: the watch uses its loudspeaker, and I do not want that on public transportation. With AirPods, I must take them out and connect them to the watch. The watch also stays connected to the phone over Bluetooth, and that uses more battery.
