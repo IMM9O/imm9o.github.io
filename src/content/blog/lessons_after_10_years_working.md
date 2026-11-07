@@ -7,7 +7,7 @@ tags:
   - career
   - tips
 featured: false
-draft: true
+draft: false
 ogImage: https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&h=630&q=80
 ---
 

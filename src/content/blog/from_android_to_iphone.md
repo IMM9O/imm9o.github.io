@@ -9,7 +9,7 @@ tags:
   - android
   - review
 featured: false
-draft: true
+draft: false
 ogImage: https://images.unsplash.com/photo-1776093667182-90fdd25fa138?auto=format&fit=crop&w=1200&h=630&q=80
 ---
 
