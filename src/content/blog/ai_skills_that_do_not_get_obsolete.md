@@ -7,7 +7,7 @@ tags:
   - ai
   - productivity
 featured: false
-draft: true
+draft: false
 ogImage: https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?auto=format&fit=crop&w=1200&h=630&q=80
 ---
 
