@@ -118,6 +118,8 @@ If you use a coding agent like Claude Code, five features give you most of the v
 
 If you do only one thing from this post, write a `CLAUDE.md` (or `AGENTS.md`) file. Put in it how to run tests, your code style, and what the agent must never do. Then, each time you fix something by hand, ask yourself: "Could a line in this file have stopped that?" If yes, add the line. Over a few weeks, the agent makes fewer of the same mistakes.
 
+![Ancient Aliens meme: The agent repeats the same mistake, maybe it is my CLAUDE.md](@assets/images/ai_skills_that_do_not_get_obsolete/meme-claude-md.png)
+
 ### Why git worktrees matter
 
 A git worktree is a second copy of your repository on a different branch, in a different folder. If you run two agents in the same folder, they overwrite each other. If each agent has its own worktree, they can work in parallel and you merge the results later. It takes a few minutes to learn and it saves hours.
@@ -154,7 +156,7 @@ When agents write code fast, the slow part becomes reading it. Code review will 
 - Ask the agent to run the tests and lint before it says it is done.
 - Read the diff yourself. Do not trust the summary.
 
-![Futurama Fry meme: Not sure if AI wrote this code, or I forgot I wrote it](@assets/images/ai_skills_that_do_not_get_obsolete/meme-ai-code.png)
+![Disaster Girl meme: Agent says all tests pass, me: did not read the diff](@assets/images/ai_skills_that_do_not_get_obsolete/meme-tests-pass.png)
 
 ## Manage your context
 
@@ -177,8 +179,6 @@ I saved a post on X with a list for leaders who want their teams to use AI well.
 - **Build small evals.** A simple test set lets you compare two models fast and decide with data.
 
 Not every point fits every team. A small company will not build a sandbox platform. But the direction is clear: more context, more tools, and shorter loops.
-
-![One Does Not Simply meme: trust the first answer of an agent](@assets/images/ai_skills_that_do_not_get_obsolete/meme-first-answer.png)
 
 ## A short checklist
 
