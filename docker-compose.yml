@@ -1,14 +1,23 @@
 version: '3'
 
 services:
+  # Live preview of whatever is checked out: edits and branch switches show up in seconds.
+  # docker compose up -d --build app -> http://localhost:8080
   app:
-    image: node:18
+    container_name: imm9o-blog
+    build:
+      context: .
+      target: dev
+    restart: unless-stopped
     ports:
-      - 4321:4321
+      - "${PORT:-8080}:4321"
     working_dir: /app
-    command: npm run dev -- --host 0.0.0.0
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
     volumes:
       - ./:/app
+      # keeps the packages from the image, not the host folder
+      - /app/node_modules
 
   # Production build served by nginx: docker compose up --build web -> http://localhost:8080
   web:
