@@ -41,7 +41,7 @@ I wanted to give old hardware a new life, and I was curious. Pop!\_OS and Fedora
 
 The distros here share the Linux kernel and much of the tooling around it. Your shell, Git and SSH habits move with you. The differences come from the choices on top of that base.
 
-I keep a "Linux 101" map in my notes. It connects the display server, the compositor or window manager, the desktop environment and the package manager.
+On a desktop system, it helps to separate the display system, the compositor or window manager, the desktop environment and the package manager.
 
 <svg viewBox="0 0 420 378" role="img" aria-labelledby="stack-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
 <title id="stack-title">A pyramid of the Linux desktop. From the base: kernel, display system, compositor or window manager, and desktop environment. The package manager installs these parts</title>
@@ -63,7 +63,7 @@ I keep a "Linux 101" map in my notes. It connects the display server, the compos
 <text x="210" y="354" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">talks to the hardware</text>
 </svg>
 
-The map is simplified. The package manager sits outside the pyramid because it installs these parts and is not a graphical layer. The update model is not in the picture either, because it describes how the parts change.
+This picture is simplified. The package manager sits outside the pyramid because it installs these parts and is not a graphical layer. The update model is not in the picture either, because it describes how the parts change.
 
 ## Difference 1: the package manager
 
@@ -79,7 +79,7 @@ The package manager and its repositories decide which software you get, which ve
 
 Debian uses APT, and so do the distros built on it, such as Ubuntu. Pop!\_OS and Linux Mint build on Ubuntu.
 
-Its practical advantage is reach. Many vendors publish Ubuntu instructions, and my own setup note for developer tools installs them with `apt`.
+Its practical advantage is reach. Many vendors publish Ubuntu instructions, so installing developer tools often starts with an `apt` command that you can take from their documentation.
 
 You can add third-party repositories, such as a PPA (a personal software repository for Ubuntu). Add one only if you trust its owner, because its packages can run with full system rights during installation. Each extra source is also one more thing to review before a version upgrade.
 
@@ -221,7 +221,7 @@ Examples: Ubuntu and Fedora Workstation use point releases. Arch and openSUSE Tu
 
 ## Difference 3: the desktop environment
 
-This choice changes how your computer feels more than the other two do. My notes list seven desktops:
+This choice changes how your computer feels more than the other two do. These are seven desktops that you will meet:
 
 | Desktop    | Character              | Seen on             |
 | ---------- | ---------------------- | ------------------- |
