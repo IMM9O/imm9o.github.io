@@ -2,14 +2,14 @@
 author: Islam Muhammad
 title: "What is the real difference between Linux distros?"
 description: Compare Linux distros by package manager, update model and desktop, then see why I recommend Ubuntu as a daily driver for developers.
-pubDatetime: 2026-11-28T08:00:00Z
+pubDatetime: 2026-11-28T06:30:00Z
 tags:
   - linux
   - ubuntu
   - fedora
   - review
 featured: false
-draft: true
+draft: false
 ogImage: https://images.unsplash.com/photo-1763568258143-904ea924ac53?auto=format&fit=crop&w=1200&h=630&q=80
 ---
 
