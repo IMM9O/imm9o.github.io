@@ -1,7 +1,7 @@
 ---
 author: Islam Muhammad
 title: "What is the real difference between Linux distros?"
-description: Three things separate one Linux distro from another, the package manager, the update model and the desktop. Use them to pick yours.
+description: Compare Linux distros by package manager, update model and desktop, then see why I recommend Ubuntu as a daily driver for developers.
 pubDatetime: 2026-11-28T08:00:00Z
 tags:
   - linux
@@ -13,9 +13,9 @@ draft: true
 ogImage: https://images.unsplash.com/photo-1763568258143-904ea924ac53?auto=format&fit=crop&w=1200&h=630&q=80
 ---
 
-Before we start: this is not a ranking, and I will not tell you that one distro wins. A distro (short for distribution) is the Linux kernel packed with the tools, apps and rules that make it a complete operating system. There are hundreds of them, and the list can scare a new user.
+Before we start: this is not a ranking of every distro. It is a way to compare them, followed by the one I recommend for daily work and the reasons for it.
 
-I did some distro hopping (moving from one distro to another), and many of them felt similar to me. My claim is simple. To compare two distros, look at three things first: the package manager, the update model and the desktop environment. The logo and the wallpaper matter much less.
+I used Ubuntu for work, every day, for 4 years. I also did some distro hopping, and the daily experience felt mostly similar to me. When I compare two distros now, I look at three decisions: how I get software, how the system changes over time, and which desktop I work in.
 
 ![An open laptop with code on the screen in neon light](https://images.unsplash.com/photo-1763568258143-904ea924ac53?auto=format&fit=crop&w=1400&q=80)
 
@@ -25,111 +25,89 @@ I did some distro hopping (moving from one distro to another), and many of them 
 
 ## Which distros did I use?
 
-You must know where my view comes from. I used Ubuntu as my daily system for 4 years. I used Pop!\_OS on some old PCs, and Fedora on one of my old laptops.
+Before Linux, I used Windows. For Linux, these three shaped my view:
 
 ![Three cards: Ubuntu for daily use for 4 years, Pop!_OS on some old PCs, and Fedora on one of my old laptops](@assets/images/real_difference_between_linux_distros/my-distros.png)
 
-I did not run every distro in this post. When I talk about Arch, openSUSE or the atomic systems, read it as an explanation of how they work. It is not a report from my own daily use.
+| Distro   | Where I used it    | Why                     |
+| -------- | ------------------ | ----------------------- |
+| Ubuntu   | Daily, for 4 years | Work                    |
+| Pop!\_OS | Some old PCs       | Old hardware, curiosity |
+| Fedora   | An old laptop      | Old hardware, curiosity |
 
-![Boromir from The Lord of the Rings: one does not simply install just one distro](@assets/images/real_difference_between_linux_distros/one-distro.png)
+I wanted to give old hardware a new life, and I was curious. Pop!\_OS and Fedora felt mostly similar to Ubuntu in daily use. I did not run Arch, openSUSE or the atomic systems as my daily system, so read those parts as an explanation of how they work.
 
-## What do all distros share?
+## What sits on top of the shared base?
 
-Start with the common part, because it is big. Every distro uses the Linux kernel (the core program that talks to your hardware). Most desktop and server distros also share many of the same tools: a shell such as Bash or Zsh, Git, SSH, and programming language runtimes.
+The distros here share the Linux kernel and much of the tooling around it. Your shell, Git and SSH habits move with you. The differences come from the choices on top of that base.
 
-For a developer, this means your knowledge moves with you. Commands such as `cd`, `grep`, `chmod` and `ssh` work in the same way. A Docker container runs on any of these systems. Your Git workflow does not change.
+I keep a "Linux 101" map in my notes. It connects the display server, the compositor or window manager, the desktop environment and the package manager.
 
-The differences sit in the choices that each distro team makes on top of that shared base. You can picture a distro as a few layers.
-
-<svg viewBox="0 0 420 330" role="img" aria-labelledby="layers-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
-<title id="layers-title">The layers of a Linux distro: desktop environment, package manager and update model on top of the shared Linux kernel and tools</title>
-<rect x="20" y="10" width="380" height="64" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:2"/>
-<text x="210" y="37" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Desktop environment</text>
-<text x="210" y="59" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">What you see and click</text>
-<rect x="20" y="86" width="380" height="64" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:2"/>
-<text x="210" y="113" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Package manager</text>
-<text x="210" y="135" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">How you get software</text>
-<rect x="20" y="162" width="380" height="64" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:2"/>
-<text x="210" y="189" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Update model</text>
-<text x="210" y="211" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">When and how the system changes</text>
-<rect x="20" y="250" width="380" height="64" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-text-base));stroke-width:2;stroke-dasharray:6 4"/>
-<text x="210" y="277" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Linux kernel and common tools</text>
-<text x="210" y="299" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">Shared by the distros</text>
+<svg viewBox="0 0 420 378" role="img" aria-labelledby="stack-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
+<title id="stack-title">A pyramid of the Linux desktop. From the base: kernel, display system, compositor or window manager, and desktop environment. The package manager installs these parts</title>
+<rect x="30" y="8" width="360" height="58" rx="29" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:2;stroke-dasharray:7 4"/>
+<text x="210" y="32" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:15px;font-weight:700">Package manager installs it</text>
+<text x="210" y="52" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">APT · DNF · pacman</text>
+<path d="M210 70 V94 M203 87 L210 96 L217 87" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2"/>
+<path d="M92.0 102 H328.0 L345.0 164 H75.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.34;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="129" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Desktop environment</text>
+<text x="210" y="150" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">what you work in</text>
+<path d="M72.0 170 H348.0 L365.0 232 H55.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.25;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="197" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Compositor / WM</text>
+<text x="210" y="218" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">places your windows</text>
+<path d="M52.0 238 H368.0 L385.0 300 H35.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.17;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="265" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Display system</text>
+<text x="210" y="286" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">Wayland · X11</text>
+<path d="M32.0 306 H388.0 L405.0 368 H15.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.08;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="333" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Linux kernel</text>
+<text x="210" y="354" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">talks to the hardware</text>
 </svg>
+
+The map is simplified. The package manager sits outside the pyramid because it installs these parts and is not a graphical layer. The update model is not in the picture either, because it describes how the parts change.
 
 ## Difference 1: the package manager
 
-A package is a bundle that holds an app or a library, plus information about what else it needs. The package manager is the tool that downloads, installs, updates and removes these bundles.
+The package manager and its repositories decide which software you get, which version, and who maintains it. The command syntax is the small part.
 
-You use it from your first day. On Windows or macOS, you often download an installer from a website. On Linux, you usually ask the package manager, and it gets the software from the repositories (online software stores that the distro trusts).
+| Family  | Tool and format | Examples             |
+| ------- | --------------- | -------------------- |
+| Debian  | APT, `.deb`     | Debian, Ubuntu, Mint |
+| Red Hat | DNF, `.rpm`     | Fedora, RHEL         |
+| Arch    | pacman          | Arch, EndeavourOS    |
 
 ### APT: Ubuntu, Pop!\_OS and their family
 
-APT works with `.deb` packages. Debian uses it, and so do the distros built on Debian, such as Ubuntu. Pop!\_OS and Linux Mint build on Ubuntu, so they use APT too.
+Debian uses APT, and so do the distros built on it, such as Ubuntu. Pop!\_OS and Linux Mint build on Ubuntu.
 
-The daily commands are short:
+Its practical advantage is reach. Many vendors publish Ubuntu instructions, and my own setup note for developer tools installs them with `apt`.
 
-```bash
-sudo apt update
-```
-
-```bash
-sudo apt upgrade
-```
-
-```bash
-sudo apt install git
-```
-
-The first command refreshes the list of available packages. The second one installs the newer versions. New users often mix them up: `update` alone does not upgrade your apps.
-
-APT has a practical advantage for beginners. Many software vendors and online guides give Ubuntu instructions first. When you search for an error at work, you have a good chance to find an answer with `apt` in it. My own setup note for developer tools starts with `sudo apt install git`.
-
-You can also add third-party repositories, such as a PPA (a personal software repository for Ubuntu). Add one only if you trust its owner, because its packages can run with full system rights during installation.
+You can add third-party repositories, such as a PPA (a personal software repository for Ubuntu). Add one only if you trust its owner, because its packages can run with full system rights during installation. Each extra source is also one more thing to review before a version upgrade.
 
 ### DNF: Fedora and its family
 
-DNF works with `.rpm` packages. Fedora uses it, and you also find it on Red Hat Enterprise Linux and related server systems.
+Fedora uses DNF, and you also find it on Red Hat Enterprise Linux and related server systems. If you know APT, the daily commands are quick to learn.
 
-```bash
-sudo dnf upgrade
-```
+The part that costs time is naming. A development library can end in `-dev` on Ubuntu and in `-devel` on Fedora. Picture a project README that lists Ubuntu packages only. On Fedora, you must find the matching names before the build works. `dnf search` helps with that.
 
-```bash
-sudo dnf install git
-```
-
-The shape is almost the same as APT. Here one command refreshes the package information when it needs to and then upgrades the system. If you know APT, you can learn the basic DNF commands in one sitting.
-
-The part that surprises people is the package names. A development library can end in `-dev` on Ubuntu and in `-devel` on Fedora. Picture a project README that lists Ubuntu packages only. On Fedora, you must find the matching names before the build works. `dnf search` helps with that.
-
-Fedora also keeps its main repositories focused on free and open source software. For some extra software, such as certain media codecs, users add RPM Fusion (a community repository).
+Fedora keeps its main repositories focused on free and open source software. For some extra software, such as certain media codecs, users add RPM Fusion (a community repository).
 
 ### Pacman: Arch and its family
 
-Pacman is the package manager of Arch Linux. Distros based on Arch, such as EndeavourOS and Manjaro, use it too.
+Arch Linux and distros based on it, such as EndeavourOS and Manjaro, use pacman. Arch does not support partial upgrades, so you upgrade the full system and do not update one package against an old base.
 
-```bash
-sudo pacman -Syu
-```
-
-```bash
-sudo pacman -S git
-```
-
-The flags look strange at first. `-S` means sync from the repositories, `y` refreshes the package list, and `u` upgrades the system. Arch does not support partial upgrades, so you upgrade the full system and do not update one package against an old base.
-
-Arch users also talk about the AUR (Arch User Repository). It is a large collection of build recipes that the community writes. It is not an official repository. Read a recipe before you build it, the same way you read a script before you run it.
+Arch users also have the AUR (Arch User Repository), a large collection of build recipes that the community writes. It is not an official repository. Read a recipe before you build it, the same way you read a script before you run it.
 
 ### What about Flatpak, Snap and AppImage?
 
 These formats work across distros, so they make the first difference smaller for desktop apps.
 
-- Flatpak runs apps with their own runtimes and limits their access through permissions. Flathub is its best known store.
-- Snap comes from Canonical, the company behind Ubuntu, and Ubuntu includes it.
-- AppImage is one file that you make executable and run, with no classic installation.
+| Format   | What to know                                                     |
+| -------- | ---------------------------------------------------------------- |
+| Flatpak  | Shared runtimes and permissions. Flathub is its best known store |
+| Snap     | Comes from Canonical. Ubuntu includes it                         |
+| AppImage | One executable file, no classic installation                     |
 
-The trade-off is that these apps can use more disk space, and some need extra permission changes to reach your files. For system tools and libraries, you still depend on the package manager of your distro. For a desktop app such as a chat client or a media player, a Flatpak is often the same on all your machines.
+The trade-off is that these apps can use more disk space, and some need extra permission changes to reach your files. For system tools and libraries, you still depend on the package manager of your distro.
 
 ### How do you choose a package manager?
 
@@ -139,30 +117,55 @@ Do not choose by command length. Choose by the answer to these questions:
 - Does your team or your server use the same family? If your servers run Ubuntu, an Ubuntu laptop lets you test the same package names.
 - When something breaks, can you find help for it?
 
-If you only browse, write and watch videos, this choice will not change your day much. It matters more when you install developer tools and native libraries.
+### Why do I care about this one?
+
+On Linux, I got used to one default tool that manages installed apps and packages. When I moved to macOS, I looked for something similar and found Homebrew. Apps on macOS can come from different places, such as the App Store, so I wanted one tool for my packages. I did not use Homebrew on Linux, although I know it is available there.
+
+That habit came with me. My feelings about the move to macOS need their own article.
 
 ## Difference 2: the update model
 
-This is my second question for any distro: how does new software reach your machine? The three common answers are point release, rolling release and atomic updates.
+The second decision is how the system changes under you. The three terms you meet are point release, rolling release and atomic updates.
 
-![Fry from Futurama squinting: not sure if new distro or just new wallpaper](@assets/images/real_difference_between_linux_distros/new-wallpaper.png)
-
-<svg viewBox="0 0 420 380" role="img" aria-labelledby="updates-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
-<title id="updates-title">Point release moves in big steps, rolling release moves all the time, and atomic updates switch between complete system images with a way back</title>
-<text x="20" y="25" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Point release: big steps</text>
-<polyline points="20,100 110,100 110,75 210,75 210,50 400,50" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:3"/>
-<text x="20" y="125" style="fill:rgb(var(--color-text-base));font-size:14px">A new version on a planned date</text>
-<text x="20" y="165" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Rolling: many small steps</text>
-<polyline points="20,235 60,235 60,228 105,228 105,221 150,221 150,214 195,214 195,207 240,207 240,200 285,200 285,193 330,193 330,186 400,186" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:3"/>
-<text x="20" y="260" style="fill:rgb(var(--color-text-base));font-size:14px">New software when it is ready</text>
-<text x="20" y="300" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">Atomic: swap the whole system</text>
-<rect x="20" y="315" width="130" height="38" rx="8" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-text-base));stroke-width:2"/>
-<text x="85" y="339" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">Old system</text>
-<rect x="270" y="315" width="130" height="38" rx="8" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:2"/>
-<text x="335" y="339" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">New system</text>
-<path d="M155 326 H262 M254 320 L264 326 L254 332" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2"/>
-<path d="M265 343 H158 M166 337 L156 343 L166 349" style="fill:none;stroke:rgb(var(--color-text-base));stroke-width:2;stroke-dasharray:5 4"/>
-<text x="210" y="374" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">You can roll back</text>
+<svg viewBox="0 0 420 394" role="img" aria-labelledby="updates-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
+<title id="updates-title">Three update rhythms. Point release is a calendar with a few big events, rolling is a stream of small changes, and atomic switches between two complete system states</title>
+<rect x="8" y="8" width="404" height="118" rx="16" style="fill:rgb(var(--color-accent));fill-opacity:.07;stroke:rgb(var(--color-accent));stroke-opacity:.5;stroke-width:1.5"/>
+<text x="210" y="34" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Point release: a calendar</text>
+<line x1="50" y1="70" x2="370" y2="70" style="stroke:rgb(var(--color-text-base));stroke-opacity:.4;stroke-width:3"/>
+<circle cx="70" cy="70" r="15" style="fill:rgb(var(--color-accent))"/>
+<circle cx="210" cy="70" r="15" style="fill:rgb(var(--color-accent))"/>
+<circle cx="350" cy="70" r="15" style="fill:rgb(var(--color-accent))"/>
+<text x="210" y="110" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">big changes on planned versions</text>
+<rect x="8" y="138" width="404" height="118" rx="16" style="fill:rgb(var(--color-accent));fill-opacity:.07;stroke:rgb(var(--color-accent));stroke-opacity:.5;stroke-width:1.5"/>
+<text x="210" y="164" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Rolling: a stream</text>
+<path d="M40 200 Q82 180 125 200 T210 200 T295 200 T380 200" style="fill:none;stroke:rgb(var(--color-accent));stroke-opacity:.5;stroke-width:3"/>
+<circle cx="40.0" cy="200.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="61.2" cy="192.9" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="82.5" cy="190.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="103.8" cy="192.9" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="125.0" cy="200.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="146.2" cy="207.1" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="167.5" cy="210.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="188.8" cy="207.1" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="210.0" cy="200.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="231.2" cy="192.9" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="252.5" cy="190.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="273.8" cy="192.9" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="295.0" cy="200.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="316.2" cy="207.1" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="337.5" cy="210.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="358.8" cy="207.1" r="5" style="fill:rgb(var(--color-accent))"/>
+<circle cx="380.0" cy="200.0" r="5" style="fill:rgb(var(--color-accent))"/>
+<text x="210" y="240" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">small changes as they are ready</text>
+<rect x="8" y="268" width="404" height="118" rx="16" style="fill:rgb(var(--color-accent));fill-opacity:.07;stroke:rgb(var(--color-accent));stroke-opacity:.5;stroke-width:1.5"/>
+<text x="210" y="294" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Atomic: two complete states</text>
+<rect x="38" y="308" width="120" height="40" rx="20" style="fill:rgb(var(--color-accent));fill-opacity:0.08;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="98" y="333" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">Previous</text>
+<rect x="262" y="308" width="120" height="40" rx="20" style="fill:rgb(var(--color-accent));fill-opacity:0.34;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="322" y="333" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">New</text>
+<path d="M170 320 H248 M240 314 L250 320 L240 326" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2.5"/>
+<path d="M250 338 H172 M180 332 L170 338 L180 344" style="fill:none;stroke:rgb(var(--color-text-base));stroke-width:2;stroke-dasharray:5 4"/>
+<text x="210" y="372" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">switch forward, or go back</text>
 </svg>
 
 ### Point release: planned versions
@@ -185,7 +188,7 @@ The gain is fresh software: new kernels, drivers and developer tools reach you e
 
 The cost is attention. Changes arrive all the time, and one of them can need a manual step. Rolling does not mean broken, but it does mean that you take part in the maintenance.
 
-![The "This is fine" dog sits in a burning room after he skipped the update news](@assets/images/real_difference_between_linux_distros/rolling-update.png)
+![The "This is fine" dog sits in a burning room: skipped the update news](@assets/images/real_difference_between_linux_distros/rolling-update.png)
 
 If you pick a rolling distro, use this short checklist:
 
@@ -218,11 +221,64 @@ Examples: Ubuntu and Fedora Workstation use point releases. Arch and openSUSE Tu
 
 ## Difference 3: the desktop environment
 
-The desktop environment is the set of parts that you see: the panel, the app launcher, the window controls, the settings and some basic apps. It changes how your computer feels more than the other two choices do.
+This choice changes how your computer feels more than the other two do. My notes list seven desktops:
+
+| Desktop    | Character              | Seen on             |
+| ---------- | ---------------------- | ------------------- |
+| GNOME      | Focused, few options   | Ubuntu, Fedora      |
+| KDE Plasma | Very configurable      | Kubuntu, Fedora KDE |
+| COSMIC     | Tiling built in, young | Pop!\_OS            |
+| Cinnamon   | Classic layout         | Linux Mint          |
+| Xfce       | Light, traditional     | Xubuntu             |
+| LXQt       | Light, Qt based        | Lubuntu             |
+| Budgie     | Clean, classic         | Ubuntu Budgie       |
+
+<svg viewBox="0 0 420 420" role="img" aria-labelledby="wheel-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
+<title id="wheel-title">A wheel of seven desktops: GNOME, KDE Plasma, COSMIC, Cinnamon, Xfce, LXQt and Budgie</title>
+<circle cx="210" cy="210" r="148" style="fill:none;stroke:rgb(var(--color-text-base));stroke-opacity:.35;stroke-width:2;stroke-dasharray:3 7"/>
+<line x1="210" y1="210" x2="210.0" y2="62.0" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<line x1="210" y1="210" x2="325.7" y2="117.7" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<line x1="210" y1="210" x2="354.3" y2="242.9" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<line x1="210" y1="210" x2="274.2" y2="343.3" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<line x1="210" y1="210" x2="145.8" y2="343.3" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<line x1="210" y1="210" x2="65.7" y2="242.9" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<line x1="210" y1="210" x2="94.3" y2="117.7" style="stroke:rgb(var(--color-accent));stroke-opacity:.35;stroke-width:2"/>
+<circle cx="210" cy="210" r="62" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:3"/>
+<text x="210" y="206" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">Pick your</text>
+<text x="210" y="228" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:16px;font-weight:700">desktop</text>
+<circle cx="210.0" cy="62.0" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="210.0" cy="62.0" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.34;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="210.0" y="61.0" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">GNOME</text>
+<text x="210.0" y="80.0" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">focused</text>
+<circle cx="325.7" cy="117.7" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="325.7" cy="117.7" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.34;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="325.7" y="116.7" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">Plasma</text>
+<text x="325.7" y="135.7" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">flexible</text>
+<circle cx="354.3" cy="242.9" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="354.3" cy="242.9" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.34;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="354.3" y="241.9" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">COSMIC</text>
+<text x="354.3" y="260.9" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">tiling</text>
+<circle cx="274.2" cy="343.3" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="274.2" cy="343.3" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.1;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="274.2" y="342.3" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">Cinnamon</text>
+<text x="274.2" y="361.3" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">classic</text>
+<circle cx="145.8" cy="343.3" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="145.8" cy="343.3" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.1;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="145.8" y="342.3" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">Xfce</text>
+<text x="145.8" y="361.3" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">light</text>
+<circle cx="65.7" cy="242.9" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="65.7" cy="242.9" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.1;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="65.7" y="241.9" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">LXQt</text>
+<text x="65.7" y="260.9" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">light, Qt</text>
+<circle cx="94.3" cy="117.7" r="47" style="fill:rgb(var(--color-card))"/>
+<circle cx="94.3" cy="117.7" r="47" style="fill:rgb(var(--color-accent));fill-opacity:0.1;stroke:rgb(var(--color-accent));stroke-width:2;stroke-linejoin:round"/>
+<text x="94.3" y="116.7" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px;font-weight:700">Budgie</text>
+<text x="94.3" y="135.7" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">clean</text>
+</svg>
 
 This is why two distros can look like different worlds while they share a package manager. It also explains the opposite case, where two distros with the same desktop look almost the same.
 
-You are not locked to one desktop. Most traditional distros let you install another one. For a beginner, I suggest a different path: pick an edition that ships with the desktop you want. Two desktops on one system can leave you with double apps and mixed settings.
+You are not locked to one desktop. Most traditional distros let you install another one. If you are new to Linux, I suggest a different path: pick an edition that ships with the desktop you want. Two desktops on one system can leave you with double apps and mixed settings.
 
 ### GNOME: simple and focused
 
@@ -248,25 +304,34 @@ It brings window tiling (the system places windows side by side for you) and wor
 
 COSMIC is much younger than GNOME and Plasma. Before you move a work machine to it, make sure that the features you depend on work well, for example screen sharing and your monitor setup.
 
-### The others
+### Cinnamon, Xfce, LXQt and Budgie
 
-You will also see these names:
-
-- Cinnamon: the desktop that comes from the Linux Mint project, with a classic layout.
-- Xfce and LXQt: lighter desktops that people often pick for older or weaker hardware.
-- Budgie: another desktop with a clean, classic style.
+Cinnamon comes from the Linux Mint project and keeps a classic layout. Xfce and LXQt are lighter, and people often pick them for older or weaker hardware. Budgie is another option with a clean, classic style.
 
 If you want to bring an old PC back to life, put a lighter desktop on your test list. Test it on the real machine, because the browser and its open tabs can use more memory than the desktop.
 
-## Bonus: what are X11 and Wayland?
+### What happens when you reshape a desktop?
 
-You can meet these two names when you read about desktops. They sit under the desktop and take part in drawing windows on your screen and handling your input.
+I was keen to make my Ubuntu look like macOS 26, and I found a way to do it with open source work. Some of those settings may be what made my laptop feel bad and slow. I did not measure it or find which setting was responsible, so treat it as a suspicion.
 
-X11 is the old and long-used system. Wayland is the newer protocol that major desktops and distros moved to, or are moving to. With Wayland, the compositor (the program that puts the windows together on screen) also does the job of the display server.
+If you want to try a heavy visual change, use this order:
 
-Most of the time you do not need to think about it. It can matter when an older tool records your screen, controls other windows or sets global shortcuts, because Wayland limits what one app can see and do. If one of your important tools has this job, test it on a live USB first.
+1. Take a system snapshot or a backup first.
+2. Note how the machine behaves before the change.
+3. Add one theme or extension at a time, then use it for a few days.
+4. Keep a list of what you installed, so you can remove it.
+5. If the machine feels slower, undo the latest change and compare.
 
-I do not count this as a fourth main difference for a new user. Your distro and desktop usually choose it for you.
+## Where do X11 and Wayland fit?
+
+X11 is the long-used window system. Wayland is the newer protocol that major desktops and distros moved to, or are moving to. With Wayland, the compositor also does the job of the display server. With X11, the display server and the window manager are separate programs.
+
+| Topic      | X11                                | Wayland                   |
+| ---------- | ---------------------------------- | ------------------------- |
+| Design     | Separate server and window manager | Compositor does both jobs |
+| App access | Apps can observe each other        | Apps are more isolated    |
+
+It matters when a tool records your screen, controls other windows or sets global shortcuts. If one of your important tools has this job, test it on a live USB first. Your distro and desktop usually pick the default, so I do not count it as a fourth main difference.
 
 ## So why does one distro feel better than another?
 
@@ -280,23 +345,22 @@ Support and community matter too. A small distro that one or two people maintain
 
 Answer three questions in this order. You will get a short list to test, and that is enough.
 
-<svg viewBox="0 0 420 410" role="img" aria-labelledby="pick-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
-<title id="pick-title">Pick a distro in three steps: the software you need, the update model you accept, and the desktop you like. Then test your short list on a live USB</title>
-<rect x="20" y="10" width="380" height="70" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-text-base));stroke-width:2"/>
-<text x="210" y="39" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">1. What software must work?</text>
-<text x="210" y="63" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">This points to a package family</text>
-<path d="M210 82 V110 M203 102 L210 112 L217 102" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2"/>
-<rect x="20" y="115" width="380" height="70" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-text-base));stroke-width:2"/>
-<text x="210" y="144" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">2. How should it change?</text>
-<text x="210" y="168" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">Planned, always fresh, or atomic</text>
-<path d="M210 187 V215 M203 207 L210 217 L217 207" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2"/>
-<rect x="20" y="220" width="380" height="70" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-text-base));stroke-width:2"/>
-<text x="210" y="249" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">3. How should it feel?</text>
-<text x="210" y="273" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">GNOME, Plasma, COSMIC or another</text>
-<path d="M210 292 V320 M203 312 L210 322 L217 312" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2"/>
-<rect x="20" y="325" width="380" height="70" rx="10" style="fill:rgb(var(--color-card));stroke:rgb(var(--color-accent));stroke-width:3"/>
-<text x="210" y="354" text-anchor="middle" style="fill:rgb(var(--color-accent));font-size:17px;font-weight:700">Test two on a live USB</text>
-<text x="210" y="378" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">Your hardware gets a vote</text>
+<svg viewBox="0 0 420 404" role="img" aria-labelledby="pick-title" style="width:100%;height:auto;max-width:520px;display:block;margin:2rem auto;">
+<title id="pick-title">A funnel for choosing a distro: required software, then update model, then desktop, which leaves two distros to test on a live USB</title>
+<path d="M8.0 8 H412.0 L385.0 80 H35.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.08;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="39" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">1. Software</text>
+<text x="210" y="61" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">what must work?</text>
+<path d="M39.0 86 H381.0 L354.0 158 H66.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.17;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="117" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">2. Updates</text>
+<text x="210" y="139" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">planned, fresh, atomic?</text>
+<path d="M70.0 164 H350.0 L323.0 236 H97.0 Z" style="fill:rgb(var(--color-accent));fill-opacity:0.26;stroke:rgb(var(--color-accent));stroke-width:1.5;stroke-linejoin:round"/>
+<text x="210" y="195" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:17px;font-weight:700">3. Desktop</text>
+<text x="210" y="217" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">how should it feel?</text>
+<path d="M210 240 V262 M203 255 L210 264 L217 255" style="fill:none;stroke:rgb(var(--color-accent));stroke-width:2.5"/>
+<circle cx="210" cy="332" r="64" style="fill:rgb(var(--color-accent));fill-opacity:0.34;stroke:rgb(var(--color-accent));stroke-width:3;stroke-linejoin:round"/>
+<text x="210" y="320" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:20px;font-weight:700">Test 2</text>
+<text x="210" y="342" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">on a live</text>
+<text x="210" y="360" text-anchor="middle" style="fill:rgb(var(--color-text-base));font-size:14px">USB</text>
 </svg>
 
 ### Question 1: what software must work?
@@ -347,17 +411,46 @@ A live USB lets you try many distros without installing them. Not all of them of
 
 A virtual machine is also good for learning the desktop and the package manager. It does not test your Wi-Fi, sleep or graphics in the same way. Some hardware behaves differently after a full installation, so keep a backup of your files before you install.
 
-## The takeaway
+## Which distro do I recommend?
 
-When someone tells you about a new distro, ask three questions:
+For a developer, or anyone who wants less hassle and less setup, I recommend Ubuntu as the daily driver, in its LTS version. You get widely supported packages, and it is the one I used for work for 4 years. The experiment with the macOS look is also a reminder to keep the base simple.
 
-- Which package manager does it use?
-- How does it update?
-- Which desktop does it ship with?
+Do not take only my word for it. These points come from official pages that I read in November 2026.
 
-> The real difference is in how you get software, how the system changes, and how you use it each day.
+### How long is it maintained?
 
-After these three, look at hardware support, community and defaults. Then stop reading comparison lists and test one. There is no perfect distro for all people, and a distro that fits your work and your machine is a good choice. You can always hop again later 😉
+Canonical publishes an LTS every two years. The [release cycle page](https://ubuntu.com/about/release-cycle) lists 5 years of standard security maintenance for packages in the Main repository. For 26.04 LTS, that runs to May 2031. You know the date before you install.
+
+### Can you get longer coverage at home?
+
+[Ubuntu Pro](https://ubuntu.com/pro) extends coverage to 10 years for the Main and Universe repositories, and a paid legacy add-on goes further. The release cycle page says that Pro is free for personal use on up to five machines. The Universe part matters, because the standard 5 years cover Main only.
+
+### Is the hardware tested?
+
+Canonical runs a [certified hardware catalogue](https://ubuntu.com/certified) for laptops, desktops and other devices. Its page describes more than 500 compatibility tests, including wireless, Bluetooth, audio and power management. This applies to the listed systems, so search for your exact model.
+
+### Do other vendors support it?
+
+| Source                                                             | What it says                                                    |
+| ------------------------------------------------------------------ | --------------------------------------------------------------- |
+| [Docker](https://docs.docker.com/engine/install/)                  | Ubuntu is a supported platform on all five listed architectures |
+| [Microsoft](https://learn.microsoft.com/en-us/windows/wsl/install) | Ubuntu is the default distro that WSL installs                  |
+
+Docker supports other distros too, Debian and Fedora among them. Its page also says that it does not test or verify installation on derivative distros. The WSL default does not prove anything about a laptop, but it shows which distro a Windows developer gets without choosing.
+
+### What do these pages not prove?
+
+They show maintenance periods, tested models and vendor support. They do not promise that your machine will have no problems, and they do not show that Ubuntu is safer than each other distro. You still need updates, backups and care with third-party repositories.
+
+### When should you choose something else?
+
+| Your need                        | Look at                      |
+| -------------------------------- | ---------------------------- |
+| Newer software, planned versions | Fedora                       |
+| Rolling updates                  | Arch or Tumbleweed           |
+| Atomic updates                   | Fedora Silverblue or Kinoite |
+
+> My pick for low hassle is Ubuntu LTS. Check your hardware and your must-have software before you install it.
 
 ## Need more?
 
